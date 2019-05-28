@@ -1,0 +1,427 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"> <!-- CRWS -->
+    <head>
+    	<!-- <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8" />, nahrazeno pouzitim IE=edge aby se projevil placeholder v datumu a casu -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Cache-control" content="no-cache" /><meta http-equiv="Pragma" content="no-cache" /><meta name="keywords" content="idos,cestovné poriadky,doprava,vlaky,autobusy,mhd" /><meta name="robots" content="noindex, nofollow" /><meta name="googlebot" content="noindex, nofollow" /><meta http-equiv="imagetoolbar" content="no" /><meta name="author" content="CHAPS spol. s r.o." /><meta name="vs_defaultClientScript" content="JavaScript" /><meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+                <!-- favicon v PNG pokud ji ma portalista definovanou -->
+                <link rel="icon" type="image/png" sizes="32x32" href="/Portal/MAFRASK/Img/favicon-32x32.png" />
+            
+                <!-- favicon pokud ji ma portalista definovanou -->
+                <link rel="shortcut icon" href="/Portal/MAFRASK/Img/mafrask-favicon.ico" type="image/x-icon" />  
+            
+        <!-- puvodni ikona, pokud by prohlizec nenacetl ikony v PNG -->
+	    <link rel="SHORTCUT ICON" href="/idos.ico" type="image/x-icon" /><meta name="mafra_conn" content="eyJtZXN0b196IjoiVHJuYXZhIiwibWVzdG9fZG8iOiJCcm5vLCzDmkFOIFp2b25hxZlrYSIsIm5hemV2X29iZWNfeiI6IlRybmF2YSIsIm5hemV2X29iZWNfZG8iOiJCcm5vIiwic3RhdF96IjoiU0siLCJzdGF0X2RvIjoiQ1oiLCJ2emRhbGVub3N0IjoxODEsImRhdHVtX29kaiI6IjI4LjA1LjIwMTkiLCJkYXR1bV9wcmkiOiIyOC4wNS4yMDE5IiwiY2FzX29kaiI6IjE4OjE4IiwiY2FzX3ByaSI6IjIxOjEwIn0=" /><title>
+	CP - Vlaky + Autobusy + MHD - Vyhľadanie spojenia
+</title>
+	    <script type="text/javascript">
+	    <!-- if (top.frames.length!=0) top.location=self.document.location; -->
+	    </script>
+	    
+	    <script type="text/javascript" src="/IdosResource.ashx?file=jquery-1.2.6.min.js&v=16296"></script>
+	    <script type="text/javascript" src="/IdosResource.ashx?file=jquery.autocomplete.min.js&v=16296"></script>
+	    <script type="text/javascript" src="/IdosResource.ashx?file=Base.js&v=16296"></script>
+	    <script type="text/javascript" src="/IdosResource.ashx?file=Main.js&v=16296"></script>
+	    
+    <link rel="stylesheet" type="text/css" href="/IdosResource.ashx?file=css/content.css&v=16296" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/IdosResource.ashx?file=css/layout.css&v=16296" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/IdosResource.ashx?file=css/print.css&v=16296" media="print" />
+<link rel="stylesheet" type="text/css" href="/IdosResource.ashx?file=Portal/MAFRASK/Css/mafrask.css&v=16296" media="screen, projection" />
+
+    
+<script type='text/javascript' >
+var sTimeOut='Dáta sa nepodarilo prevziať. Uplynul časový limit.\r\n(kód služby: HTTP'; var sNoData1='Dáta sa nepodarilo prevziať.\r\n'; var sNoData2='\r\n(kód služby: HTTP'; var sLoadingData='Načítavam dáta...'; var sNoAnswer='Požiadavka nebola na serveri spracovaná alebo sa nevrátila odpoveď.\r\nKeď sa bude podobná chyba opakovať, je server zaneprázdnený alebo mimo prevádzky, vyvolajte aplikáciu neskôr znovu.'; var sUncorectLoad='Stránku sa nepodarilo korektne načítať. Pred ďalšou akciou stránku obnovte.'; var sPageName='conn.aspx';var sAppPath='/';var bUseISAPI=true;var sPortalLangDefault='SLOVAK';var oBaseParams = new BaseParams('VlakBusMHDSk', 'vlakbusmhd', false, true, 'Vlaky + Autobusy + MHD');
+var sIDOSKey='d215SlVlSXlsSDl5T2h1dmpnalB3K3pKYS9lLzVoTk5TYlJwWXd1LzBmOD0-'; 
+var goACEHistory = new ACEHistory();
+goACEHistory.AddItems(new Array({"oItem":{"iTTIndex":-1,"iVirtList":-1,"iVirtListID":1,"iItem":14391,"sName":"Trnava","sName_FX":"Trnava","bPriorityQueue":false,"bVicinity":false},"aoStations":null,"sRegion":"okres Trnava","sState":null,"bRegion":false,"sTrCategory":"vlaky, autobusy, MHD","sType":"obec","aiTrTypeID":[151,152,153,200,201,202,301],"sLines":null,"iStCount":138,"dblCoorY":0,"dblCoorX":0,"ImgID":1},{"oItem":{"iTTIndex":-1,"iVirtList":-1,"iVirtListID":1,"iItem":1483,"sName":"Brno","sName_FX":"Brno [*CZ]","bPriorityQueue":false,"bVicinity":false},"aoStations":null,"sRegion":"okres Brno-město","sState":"Česko","bRegion":false,"sTrCategory":"vlaky, autobusy","sType":"obec","aiTrTypeID":[150,151,152,153,154,200,156,300,306,201,202],"sLines":null,"iStCount":371,"dblCoorY":0,"dblCoorX":0,"ImgID":1}),'');
+var asScript = new Array('sendmail.aspx', 'myconn.aspx', 'connsms.aspx', 'about.aspx', 'conn.aspx', 'dep.aspx', 'zjr.aspx', 'lines.aspx', 'connmore.aspx', 'delay.aspx', 'help.aspx', 'route.aspx', 'map.aspx', 'osj.aspx');
+var asUrl = new Array('email', 'mojespojenia', 'spojeniesms', 'cp', 'spojenie', 'odchody', 'zcp', 'spoje', 'detail', 'poloha', 'sepkar', 'draha', 'mapa', 'osj');
+
+var sContextData='MTAyNTAzNzc2JVRybmF2YSDCuyBCcm5vOyDEjGVza28sIyBvZCAyOC41LjIwMTkgVXQgMTc6NDMlLTE-';
+var sResultPrefix='ctl00_cDM_'; 
+var iConnCount=3; 
+var iConnHandle=102503776; 
+var oDateLimit = new DateLimit(); 
+Calendar = function (){}; Calendar.prototype = {};
+goBalloonCache['fixlink'] = '<div id="balloondiv" class="jr-popup jr-popupsel hide"><div id="lista_balloondiv" class="head"><h2>Trval&#253; odkaz na n&#225;jden&#233; spojenia</h2><div class="break"></div></div><div class="close"><a href="javascript:HideDiv(\'balloondiv\');" class="btn-delete"><img src="../../img/btn-delete.png" alt="+" width="23" height="22" title="Zavrieť" /></a></div><div class="body"><div class="hlptext"><input type="text" value="https://cp.hnonline.sk/vlakbusmhd/spojenie/?date=28.05.2019&amp;time=17%3a43&amp;f=Trnava&amp;t=Brno+%5b*CZ%5d&amp;fc=1&amp;tc=1&amp;submit=true" class="fxinp" /><br /><input type="hidden" value="https://cp.hnonline.sk/vlakbusmhd/spojenie/?date=28.05.2019&amp;time=17%3a43&amp;f=Trnava&amp;t=Brno+%5b*CZ%5d&amp;fc=1&amp;tc=1&amp;submit=true" class="fxwdatelink" /><input type="hidden" value="https://cp.hnonline.sk/vlakbusmhd/spojenie/?f=Trnava&amp;t=Brno+%5b*CZ%5d&amp;fc=1&amp;tc=1&amp;submit=true" class="fxnodatelink" /><input type="hidden" value="CP, Trnava » Brno; Česko, od 28.05.2019 17:43" class="fxwdatetitle" /><input type="hidden" value="CP, Trnava » Brno; Česko" class="fxnodatetitle" /><input type="radio" name="fxradio" id="exacttime" value="exact" class="fxsel" checked="checked"><label for="exacttime">Adresa práve vyhľadaného spojenia</label><br /><input type="radio" name="fxradio" id="acttime" value="all" class="fxsel" ><label for="acttime">Adresa pre vyhľadanie spojenia v aktuálny dátum a čas</label><br /><a href="#" class="addfav ico-star">Pridať vybratú adresu k obľúbeným</a><br />Viacej informácií o trvalom odkaze nájdete <a href="http://www.chaps.cz/files/idos/IDOS-API.pdf" class="ext">tu</a>.</div></div></div>'; 
+var asChoseControl = new Array();
+asChoseControl = ['ctl00_cDM_ctlChoseConnTop', 'ctl00_cDM_ctlChoseConnBottom']; function pageLoad(){
+  pageLoad_Conn(1);
+}
+</script>
+    
+
+                
+                <script type="text/javascript" src="//sk.adocean.pl/files/js/ado.js"></script>
+                <script type="text/javascript">
+                    /* (c)AdOcean 2003-2017 */
+                    if(typeof ado!=="object"){ado={};ado.config=ado.preview=ado.placement=ado.master=ado.slave=function(){};} 
+                    ado.config({mode: "old", xml: false, characterEncoding: true});
+                    ado.preview({enabled: true, emiter: "sk.adocean.pl", id: "sj6X3HeuNvibA.toVjLefLHn.mW.FDuB5IQLFRrGJS3.u7"});
+                </script>
+                <!-- start master -->
+                <script type="text/javascript">
+                    /* (c)AdOcean 2003-2017, MASTER: hnonline.sk - cp.sk */
+                    ado.master({id: 'CV43IME3J_W35SafCwtDcfckDnPQqtr8p9Dr6S6Xt0v.c7', server: 'sk.adocean.pl' });
+                </script>
+                
+                <!--  end master  -->
+            
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({
+                    google_ad_client: "ca-pub-7043718007099363",
+                    enable_page_level_ads: true
+                });
+            </script>
+        </head>
+
+    <body id="mainbody" >   
+        <div id="main">
+            
+    <div class="banner">
+        <div id="adoceanskwoeskqmfqm"></div>
+        <script type="text/javascript">
+            /* (c)AdOcean 2003-2017, hnonline.sk - cp.sk - advertleader*/
+            ado.slave('adoceanskwoeskqmfqm', { myMaster: 'CV43IME3J_W35SafCwtDcfckDnPQqtr8p9Dr6S6Xt0v.c7' });
+        </script>
+    </div>
+
+
+            <div id="mother">
+                <div id="mother-inner">
+                    
+                        
+                        <div id="adoceanskregpcnrful"></div>
+                        <script type="text/javascript">
+                            /* (c)AdOcean 2003-2017, hnonline.sk - cp.sk - branding/skin*/
+                            ado.slave('adoceanskregpcnrful', { myMaster: 'CV43IME3J_W35SafCwtDcfckDnPQqtr8p9Dr6S6Xt0v.c7' });
+                        </script>
+                       
+                    
+                    
+                    <form name="aspnetForm" method="post" action="conn.aspx" id="aspnetForm" onsubmit="javascript:return SetFormParams();">
+<input type="hidden" name="__VIEWSTATEFIELDCOUNT" id="__VIEWSTATEFIELDCOUNT" value="4" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE5MjA5Mzc3NDEPFgIeB2NvbnRleHQy9gsAAQAAAP////8BAAAAAAAAAAwCAAAAQ0lET1MzLCBWZXJzaW9uPTMuMC43MDMzLjE2Mjk2LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAABxDSEFQUy5JRE9TMy5Db25uX0NvbnRleHREYXRhJgAAAAtpRm9yY2VTY2VuYQdpSGFuZGxlBmlTY2VuYQppU2hvd1BhcnRzBGJWaWEHYkNoYW5nZQ1hb0Zyb21SZXF1ZXN0C2FvVG9SZXF1ZXN0DGFvVmlhUmVxdWVzdA9hb0NoYW5nZVJlcXVlc3QGZHREYXRlBXNEYXRlBXNUaW1lC2JEaXJlY3RDb25uCmJJc0RlcFRpbWUIYWlUeXBlSUQKaU1heENoYW5nZQ1pTWF4QXJjTGVuZ3RoEWlNYXhBcmNMZW5ndGhDaXR5EWlNYXhBcmNMZW5ndGhGcm9tD2lNYXhBcmNMZW5ndGhUbw5iTGltaXRXYWxrQXJjcw5pUHJlZmVyZVRyYWlucw1iQXV0b1N0cmF0ZWd5DGlMb3dEZWNrQ29ubghpVXNlQmVkcw5pTG93RGVja0Nvbm5UcglhaU1pblRpbWUJYWlNYXhUaW1lDGFpRkNTZWFyY2hJRApzT3duZXJNYXNrCXNOdW0xTWFzawpzQ29tYklEQWJzB3NDb21iSUQQYkRpc2FibGVQcmV2TmV4dAhiRm9jdXNUbwZzUmVjYXAPc1NlbGZTZXJpYWxpemVkAAAA" />
+<input type="hidden" name="__VIEWSTATE1" id="__VIEWSTATE1" value="AAAABAQEBAABAQAABwAAAAAAAAAAAAAABwcHAQEBAQAAAQEICAgIAQElQ0hBUFMuSURPUzMuQ1JXUy5HbG9iYWxMaXN0SXRlbUluZm9bXQIAAAAlQ0hBUFMuSURPUzMuQ1JXUy5HbG9iYWxMaXN0SXRlbUluZm9bXQIAAAAlQ0hBUFMuSURPUzMuQ1JXUy5HbG9iYWxMaXN0SXRlbUluZm9bXQIAAAAlQ0hBUFMuSURPUzMuQ1JXUy5HbG9iYWxMaXN0SXRlbUluZm9bXQIAAAANAQEICAgICAgBCAEICAgICAgBAQIAAAAAAAAAYBUcBgEAAAAAAAAAAAAJAwAAAAkEAAAACgoAKkbtk+PWCAYFAAAAAAkFAAAAAAEK/////wAAAAAAAAAA//////////8AAAAAAAD/////AAAAAAAAAAAKCgoKCgYGAAAAL1ZsYWtCdXNNSERTay1lZWY5ZWY3MTk2ZDM0YjliOWE0MDc3MDM3ZmJhMDkxNy02CgAACgoHAwAAAAABAAAAAQAAAAQjQ0hBUFMuSURPUzMuQ1JXUy5HbG9iYWxMaXN0SXRlbUluZm8CAAAACQcAAAAHBAAAAAABAAAAAQAAAAQjQ0hBUFMuSURPUzMuQ1JXUy5HbG9iYWxMaXN0SXRlbUluZm8CAAAACQgAAAAMCQAAAElTeXN0ZW0sIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQcAAAAjQ0hBUFMuSURP" />
+<input type="hidden" name="__VIEWSTATE2" id="__VIEWSTATE2" value="UzMuQ1JXUy5HbG9iYWxMaXN0SXRlbUluZm8KAAAACXNTdGF0ZVJlZwhzTmFtZV9GWAxpTGlzdElERmllbGQKaUl0ZW1GaWVsZApzTmFtZUZpZWxkC2RDb29yWEZpZWxkC2RDb29yWUZpZWxkDmJWaWNpbml0eUZpZWxkE2JQcmlvcml0eVF1ZXVlRmllbGQUUHJvcGVydHlDaGFuZ2VkRXZlbnQBAQAAAQAAAAAECAgGBgEBMVN5c3RlbS5Db21wb25lbnRNb2RlbC5Qcm9wZXJ0eUNoYW5nZWRFdmVudEhhbmRsZXIJAAAAAgAAAAoGCgAAAAZUcm5hdmEBAAAANzgAAAkKAAAAAAAAAAAAAAAAAAAAAAAAAAAACgEIAAAABwAAAAYLAAAABsSMZXNrbwYMAAAACkJybm8gWypDWl0BAAAAywUAAAYNAAAABEJybm8AAAAAAAAAAAAAAAAAAAAAAAAKCxYCZg9kFgICBA8WAh4GYWN0aW9uBQljb25uLmFzcHgWBGYPFgIeCWlubmVyaHRtbAVVT3NwcmF2ZWRsxYh1amVtZSBzYSwgYXBsaWsmIzIyNTtjaWEgQ1AgcG90cmVidWplIGsgxI1pbm5vc3RpIHphcG51dCYjMjUzOyBKYXZhU2NyaXB0LmQCBg9kFgJmD2QWAmYPZBYCZg8WAh4HVmlzaWJsZWhkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYDBRhjdGwwMCRjRE0kUHJpbnQxNzM0MDgzMzMFGGN0bDAwJGNETSRQ" />
+<input type="hidden" name="__VIEWSTATE3" id="__VIEWSTATE3" value="cmludDE3MzQwODMyOQUYY3RsMDAkY0RNJFByaW50MTczNDA4MzMyJdi/fV87wDc2xPr2DIo27q24oJU=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="55EA55A0" />
+                        
+                    <input type="text" class="hide out" id="localityID" autocomplete="locality" />
+                    <input type="text" class="hide out" id="txtval" />
+                    <div id="idos-main" class="res menusec" ><!-- start main -->
+                        <noscript><div id="ctl00_noscr" class="noscr">Ospravedlňujeme sa, aplik&#225;cia CP potrebuje k činnosti zapnut&#253; JavaScript.</div></noscript>
+                        
+                        
+<div id="headershift">  
+    <div class="headerlinks">
+        <a href="http://slovensko.hnonline.sk" target="_blank">SLOVENSKO</a>
+        <a href="http://svet.hnonline.sk" target="_blank">ZAHRANIČIE</a>
+        <a href="http://finweb.hnonline.sk" target="_blank">EKONOMIKA</a>
+        <a href="http://auto.hnonline.sk" target="_blank">AUTO</a>
+        <a href="http://sportky.zoznam.sk" target="_blank">ŠPORT</a>
+        <a href="http://hntelevizia.sk" target="_blank">TELEVÍZIA</a>
+        <a href="http://svetevity.sk" target="_blank">SVETEVITY</a>
+        <a href="http://topky.sk" target="_blank" class="nobg">TOPKY</a> 
+    </div>
+    <a href="http://cp.hnonline.sk" class="logoL"><img src="Portal/MAFRASK/Img/CestovnePoriadky.png" alt="Cestovné poriadky" title="Cestovné poriadky" border="0" width="326" height="50" /></a>
+    
+<div id="main-menu"><!-- start Menu -->
+    <h2 class="out">Hlavní menu</h2>
+	<ul id="ctl00_ctlHeaderShift_ctl00_cMenu_Tabs" class="tabs"><li class="active"><a title="Vyhľadanie spojenia" href="/vlakbusmhd/spojenie/" onclick="SetLinkParams(this);"><span class="in1"><span class="in2">Spojenie</span></span></a></li><li><a title="Vyhľadanie odchodov" href="/vlakbusmhd/odchody/" onclick="SetLinkParams(this);"><span class="in1"><span class="in2">Odchody</span></span></a></li><li><a title="Zastávkové cestovné poriadky" href="/vlakbusmhd/zcp/" onclick="SetLinkParams(this);"><span class="in1"><span class="in2">Zastávkové CP</span></span></a></li><li><a title="Vyhľadanie spojov" href="/vlakbusmhd/spoje/" onclick="SetLinkParams(this);"><span class="in1"><span class="in2">Spoje</span></span></a></li><li class="orange-li1"><a title="Výber cestovného poriadku MHD" href="/vlakbusmhd/mhd/" onclick="SetLinkParams(this);"><span class="in1"><span class="in2">MHD</span></span></a></li></ul>
+    
+	<div class="break"></div>
+</div><!-- end Menu -->
+    <div class="logoR">
+        <a href="http://hnonline.sk/"><img alt="HNonline.sk" title="HNonline.sk" src="Portal/MAFRASK/Img/hnonline.png" border="0" width="120" height="24"/></a>
+        <a href="/" class="cpsklogo"><img height="40" width="40" alt="CP" src="Portal/MAFRASK/Img/logo-cpsk.gif" /></a>
+    </div>
+</div>
+                        <div id="content">
+                            
+<div class="menusecond">
+    <ul id="ctl00_cMenuSecond_Tabs" class="textlinks"><li><a title="Šepkár" href="help.aspx?hp=main#conn" onclick="return PopupOpen(event,'help');" class="ico-help"><span class="in1"><span class="in2">Šepkár</span></span></a></li></ul>
+</div>
+                            
+ 
+
+
+
+<div id="main-res">
+<div id="main-res-inner">
+    <div class="recap"><div class="floatright recapdate">od 28.5.2019 Ut 17:43</div><h1>Trnava » Brno<span class="recapsufix">; Česko</span></h1></div>
+    <!-- buttons top start -->
+        <div id="ctl00_cDM_ctlPagingTop_ctlPaging" class="r screen">
+    <a onclick="javascript:return ConnPrevNextClick(true);" id="ctl00_cDM_ctlPagingTop_cmdPrev" title="Predchádzajúce spojenie (kláves P)" class="btn-arrow-prev" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlPagingTop$cmdPrev&#39;,&#39;&#39;)"><span class="iw">predchádzajúce</span></a>
+    <a onclick="javascript:return ConnPrevNextClick(false);" id="ctl00_cDM_ctlPagingTop_cmdNext" title="Nasledujúce spojenie (kláves N)" class="btn-arrow-next" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlPagingTop$cmdNext&#39;,&#39;&#39;)"><span class="iw">nasledujúce </span></a>
+</div>
+<div class="screen">
+    
+    <a onclick="javascript:return IsEnableClick();" id="ctl00_cDM_ctlResBtnsTop_cmdChangeInput" title="Zmeniť zadanie na nájdenie spojenia (kláves Z)" class="btn-text-blue" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlResBtnsTop$cmdChangeInput&#39;,&#39;&#39;)"><span class="iw">Zmeniť zadanie</span></a>
+    <a onclick="javascript:return IsEnableClick();" id="ctl00_cDM_ctlResBtnsTop_cmdNew" title="Nové zadanie na nájdenie spojenia (kláves O)" class="btn-text-blue" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlResBtnsTop$cmdNew&#39;,&#39;&#39;)"><span class="iw">Nové zadanie</span></a>
+    <a onclick="javascript:return IsEnableClick();" id="ctl00_cDM_ctlResBtnsTop_cmdConnBack" title="Nájdenie spojenia v opačnom smere jazdy (kláves H)" class="btn-text-blue" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlResBtnsTop$cmdConnBack&#39;,&#39;&#39;)"><span class="iw">Hľadať cestu naspäť</span></a>
+    <a href="javascript:void(0);" id="ctl00_cDM_ctlResBtnsTop_cmdConnFixed" class="btn-text-blue" title="Trvalý odkaz na nájdené spojenia" onclick="javascript:ShowHideDiv_Fix(event, &#39;ctlResBtnsTop_cmdConnFixed&#39;);"><span class="iw">Trvalý odkaz</span></a>
+    
+    
+</div>
+    
+        <div class="break"></div>
+        <p id="ctl00_cDM_ctlChoseConnTop_choseconn" class="screen">
+    <strong><span id="ctl00_cDM_ctlChoseConnTop_allres">Všetky</span><span id="ctl00_cDM_ctlChoseConnTop_choseres" class="hidden">Vybraté</span> výsledky</strong>
+    <a href="javascript:PrintConnsResults('ctl00_cDM_Print',false);" id="ctl00_cDM_ctlChoseConnTop_connprint" class="ico-print m-textlink" title="Vytlačiť nájdené spojenie">Vytlačiť</a>
+    <a href="javascript:PrintPDFConnsResults('ctl00_cDM_Print',false);" id="ctl00_cDM_ctlChoseConnTop_connprintpdf" class="ico-pdf m-textlink">PDF</a>
+    <a href="javascript:MailConnsResults('ctl00_cDM_Print',false);" id="ctl00_cDM_ctlChoseConnTop_connmail" class="ico-mail m-textlink" title="Poslať nájdené spojenie e-mailom">Poslať e-mailom</a>
+    <a href="javascript:MCAddItems(false);" id="ctl00_cDM_ctlChoseConnTop_connaddmc" class="ico-wallet m-textlink" title="Pridá nájdené spojenia do Mojich spojení">Pridať do Mojich spojení</a>
+    <a href="javascript:void(0);" id="ctl00_cDM_ctlChoseConnTop_connsettings" class="ico-settings m-textlink" title="Nastavenie tlače" onclick="javascript: ShowHideDiv2(event, &#39;PrintSettings&#39;, &#39;2&#39;);">Nastavenie</a>
+    
+    
+</p>    
+    <!-- buttons top end -->
+    
+<!-- zobrazeni vysledku start -->        
+    <table id="ctl00_cDM_restbl_173408333" class="results" border="0">
+	<thead>
+		<tr>
+			<th class="time w6p">18:18</th><th class="left w6p">Dátum</th><th class="left w31p">Odkiaľ/Prestup/Kam</th><th class="right w5p">Prích.</th><th class="right w5p">Odch.</th><th class="right w7p">Pozn.</th><th class="right w6p">&nbsp;</th><th class="left w36p">Spoje</th>
+		</tr>
+	</thead><tbody>
+		<tr class="datarow first">
+			<td class="check"><input name="ctl00$cDM$Print173408333" type="checkbox" id="ctl00_cDM_Print173408333" onclick="javascript:ChangePrint(173408333)" class="inp-checkbox" /></td><td class="date">28.5.</td><td>Trnava </td><td class=" suppress right">18:15</td><td class="right">18:18</td><td class="right" colspan="2"><a href="/poloha/?p=NzE2JTAlNzA4NzglNTYxMzY3NiU1NjEzNTk2JTAlNDAxNjMlMTg6MTglMTg6NDElMjguMDUuMjAxOSVYMV8wIzU2OjcxNiVWbGFrQnVzTUhEU2stZWVmOWVmNzE5NmQzNGI5YjlhNDA3NzAzN2ZiYTA5MTctNg--&amp;" onclick="return PopupOpen(event,&#39;delay&#39;);"><img src="../../img/del.gif" alt="Poloha vlaku" title="Poloha vlaku" /></a> </td><td><img src="../../img/train_p.gif" alt="Vlak" title="Vlak" /> <a href="/draha/?p=7yTVEmdE9Nkip3nNxLiHJRmepifpR37GIvYKohtP:pOIgyekN9RPs7sg8HYTvYwwvCoV5NtEvLQhNBuAgKe5MoCWAtTKl1XyGsK2Kjysu1b.sG0xXC6jKV74WXacOb7F3QaeP06v1EewjFH4F4:cpaGd6za5uZ.0" title="Regionálny rýchlik (Žilina >> Bratislava hl.st.)" style="color:#0000FF;" onclick="return PopupOpen(event,&#39;route&#39;);">RR 716 Javorník</a> <img src="img/FC/082.gif" alt="do označených vozňov možno k cestovnému lístku zakúpiť miestenku" title="do označených vozňov možno k cestovnému lístku zakúpiť miestenku" width="14" height="14" /> <img src="img/FC/186.gif" alt="v označených vozňoch je v cene cestovného bezdrôtové pripojenie k internetu" title="v označených vozňoch je v cene cestovného bezdrôtové pripojenie k internetu" width="20" height="14" /> <img src="img/FC/179.gif" alt="vo vlaku je radený vozeň s prípojkou 230 V" title="vo vlaku je radený vozeň s prípojkou 230 V" width="14" height="14" /> <img src="img/FC/174.gif" alt="vozeň alebo kupé vo vozni vyhradené pre cestujúcich s deťmi do 10 rokov" title="vozeň alebo kupé vo vozni vyhradené pre cestujúcich s deťmi do 10 rokov" width="14" height="14" /> <img src="img/FC/176.gif" alt="pojazdná úschovňa batožín, možnosť rezervácie miest pre bicykle" title="pojazdná úschovňa batožín, možnosť rezervácie miest pre bicykle" width="14" height="14" /> <img src="img/FC/178.gif" alt="zjednodušená preprava batožín, rozšírená preprava bicyklov - pod dohľadom cestujúceho s možnosťou rezervácie" title="zjednodušená preprava batožín, rozšírená preprava bicyklov - pod dohľadom cestujúceho s možnosťou rezervácie" width="14" height="14" /> <img src="img/FC/169.gif" alt="vo vlaku je radený vozeň so zdvíhacou plošinou a kupé na prepravu imobilných cestujúcich" title="vo vlaku je radený vozeň so zdvíhacou plošinou a kupé na prepravu imobilných cestujúcich" width="14" height="14" /> <div class="delaydiv"><span class="delayto15">Aktuálne meškanie 14 minút</span></div></td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td>Bratislava-Vinohrady </td><td class="right">18:39</td><td class="suppress right">18:41</td><td colspan="2">&nbsp;</td><td><img src="../../img/foot_p.gif" alt="Presun" title="Presun" /> Presun asi 3 min</td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td>Bratislava,,ŽST Vinohrady </td><td class="suppress center ">></td><td class="right">19:07</td><td class="note" colspan="2"><span title="tar. pásmo">100</span></td><td><img src="../../img/bus_p.gif" alt="Autobus" title="Autobus" /> <a href="/draha/?p=qUxo9srup0DPXJdaX7u9GhpxY30ev0YZPxyKcaV6YkxTH.MY9IWfsmP6qMm62DSWKck6eLIGK8yCfWoR:woX5jEGi5.0dYxYUgmtxglpXMLkGca2zVeziA7xPXperFbwkmoMoJt:W0Al2cBLs.oV3Q--" title="miestny autobus (Pezinok,,nemocnica I >> Bratislava,,AS)" style="color:#0000FF;" onclick="return PopupOpen(event,&#39;route&#39;);">102428 98</a> <img src="img/FC/072.gif" alt="spoj s bezbariérovo prístupným vozidlom" title="spoj s bezbariérovo prístupným vozidlom" width="14" height="14" /> </td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td>Bratislava,,AS </td><td class="right">19:23</td><td class="right">19:30</td><td colspan="2"><table class="unitednote" border="0">
+				<tr>
+					<td class="note"><span title="nástupište">6</span></td><td class="right"><a href="https://amsbus.sk/cpsk/koupitjizdenku/api/?nas_idz=2498&cil_idz=2774&cas_odj=19:30&linka_ams=000335&spoj_ams=31&dat_odj=28.5.2019&lang=S" target="amsshop" class="buylink"><img src="../../img/kup-zlute-sk.png" alt="AMS: kúpiť e-lístok" title="AMS: kúpiť e-lístok" /></a> </td>
+				</tr>
+			</table></td><td><img src="../../img/bus_p.gif" alt="Autobus" title="Autobus" /> <a href="/draha/?p=LEafXbmH1mNfZClyWE5JL..wEGbA7sF:UfBY8ADn2DUfFnZOCvcnakIksZNvysNUQVR7utKUewTxWuzbFPyK6ED2wKAyrzayPQhIk2jf56.orDlCOKwBtzS1CBNdPxae6r93UYN7ktgr24vK.uD4bQ--" title="medzinárodný autobus (Rimavská Sobota,,AS >> Brno,,ÚAN Zvonařka)" style="color:#008000;" onclick="return PopupOpen(event,&#39;route&#39;);">609704 31</a> <img src="img/FC/082.gif" alt="možno zakúpiť miestenku" title="možno zakúpiť miestenku" width="14" height="14" /> </td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td>Brno,,ÚAN Zvonařka </td><td class="right">21:10</td><td>&nbsp;</td><td colspan="2">&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td colspan="6" class="notes"><p>Celkový čas <strong>2 hod 52 min</strong>, vzdialenosť <strong>181 km</strong></p><ul><li class="ico-info-beige" title="Dopravca">Železničná spoločnosť Slovensko, a.s. (RR 716), Slovak Lines, a.s. (Bus 102428), ČSAD Tišnov, spol. s r.o. (Bus 609704)</li></ul><p class="links"><a href="/detail/?p=MTAyNTAzNzc2JTE3MzQwODMzMyUlVmxha0J1c01IRFNrLWVlZjllZjcxOTZkMzRiOWI5YTQwNzcwMzdmYmEwOTE3LTY-" onclick="return PopupOpen(event,&#39;connmore&#39;);">Detail spojenia</a> | <a href="javascript:PrintConnResults(173408333)">Vytlačiť</a> | <a href="javascript:MailConnResults('173408333');">Poslať e-mailom</a> | <a href="javascript:DeleteConnection(173408333, false)">Odstrániť spojenie</a> | <a href="javascript:MCAddItem(173408333, false)">Pridať do Mojich spojení</a> | <a href="../../API.aspx?cmd=ICAL&p=Vmxha0J1c01IRFNrJTEwMjUwMzc3NiUxNzM0MDgzMzM-" class="nobr">Pridať do kalendára</a></p></td>
+		</tr>
+	</tbody>
+</table>
+    <div class="mskmiddleboard">
+        <div id="adoceanskyhmgemesce"></div>
+        <script type="text/javascript">
+            /* (c)AdOcean 2003-2017, hnonline.sk - cp.sk - advertrectangle*/
+            ado.slave('adoceanskyhmgemesce', { myMaster: 'CV43IME3J_W35SafCwtDcfckDnPQqtr8p9Dr6S6Xt0v.c7' });
+        </script>
+    </div>
+
+<table id="ctl00_cDM_restbl_173408329" class="results" border="0">
+	<thead>
+		<tr>
+			<th class="time w6p">19:18</th><th class="left w6p">Dátum</th><th class="left w31p">Odkiaľ/Prestup/Kam</th><th class="right w5p">Prích.</th><th class="right w5p">Odch.</th><th class="right w7p">Pozn.</th><th class="right w6p">&nbsp;</th><th class="left w36p">Spoje</th>
+		</tr>
+	</thead><tbody>
+		<tr class="datarow first">
+			<td class="check"><input name="ctl00$cDM$Print173408329" type="checkbox" id="ctl00_cDM_Print173408329" onclick="javascript:ChangePrint(173408329)" class="inp-checkbox" /></td><td class="date">28.5.</td><td>Trnava </td><td class=" suppress right">19:15</td><td class="right">19:18</td><td class="right" colspan="2"><a href="/poloha/?p=NjEwJTAlNjM3NzUlNTYxMzY3NiU1NjEzMjA2JTAlNDAxNjMlMTk6MTglMTk6NDclMjguMDUuMjAxOSVYMV8wIzU2OjYxMCVWbGFrQnVzTUhEU2stZWVmOWVmNzE5NmQzNGI5YjlhNDA3NzAzN2ZiYTA5MTctNg--&amp;" onclick="return PopupOpen(event,&#39;delay&#39;);"><img src="../../img/del.gif" alt="Poloha vlaku" title="Poloha vlaku" /></a> </td><td><img src="../../img/train_p.gif" alt="Vlak" title="Vlak" /> <a href="/draha/?p=bzOjecUuMWV5Tm.B40MnMC3HQbKZg9HzYJc0.IicOWL3LHklFffGkBLzIl..bvI5dzL:3qMTknhRLGd7LipzugaVQZRMTIxALTlsZigWUb4z7bgIcT34RdtP9tcmvwF8kVgy2AeUOFOGqYI4sXEZrgCtrJuHGADk" title="rýchlik (Košice >> Bratislava hl.st.)" style="color:#FF0000;" onclick="return PopupOpen(event,&#39;route&#39;);">R 610 iZlato.sk</a> <img src="img/FC/082.gif" alt="do označených vozňov možno k cestovnému lístku zakúpiť miestenku" title="do označených vozňov možno k cestovnému lístku zakúpiť miestenku" width="14" height="14" /> <img src="img/FC/077.gif" alt="reštauračný alebo bistro vozeň" title="reštauračný alebo bistro vozeň" width="14" height="14" /> <img src="img/FC/186.gif" alt="v označených vozňoch je v cene cestovného bezdrôtové pripojenie k internetu" title="v označených vozňoch je v cene cestovného bezdrôtové pripojenie k internetu" width="20" height="14" /> <img src="img/FC/179.gif" alt="vo vlaku je radený vozeň s prípojkou 230 V" title="vo vlaku je radený vozeň s prípojkou 230 V" width="14" height="14" /> <img src="img/FC/174.gif" alt="vozeň alebo kupé vo vozni vyhradené pre cestujúcich s deťmi do 10 rokov" title="vozeň alebo kupé vo vozni vyhradené pre cestujúcich s deťmi do 10 rokov" width="14" height="14" /> <img src="img/FC/176.gif" alt="pojazdná úschovňa batožín, možnosť rezervácie miest pre bicykle" title="pojazdná úschovňa batožín, možnosť rezervácie miest pre bicykle" width="14" height="14" /> <img src="img/FC/178.gif" alt="zjednodušená preprava batožín, rozšírená preprava bicyklov - pod dohľadom cestujúceho s možnosťou rezervácie" title="zjednodušená preprava batožín, rozšírená preprava bicyklov - pod dohľadom cestujúceho s možnosťou rezervácie" width="14" height="14" /> <img src="img/FC/169.gif" alt="vo vlaku je radený vozeň so zdvíhacou plošinou a kupé na prepravu imobilných cestujúcich" title="vo vlaku je radený vozeň so zdvíhacou plošinou a kupé na prepravu imobilných cestujúcich" width="14" height="14" /> <div class="delaydiv"><span class="delayto15">Aktuálne meškanie 9 minút</span></div></td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td>Bratislava hl.st. </td><td class="right">19:47</td><td class="right">20:10</td><td colspan="2">&nbsp;</td><td><img src="../../img/train_p.gif" alt="Vlak" title="Vlak" /> <a href="/draha/?p=DQw9U0CJjnf.vgFNi64PsTJAYOJ2jCQ62F0c5:38UjG4MzuomgXyytY9bUQdCXwSub1HbJVB43RW1UKkI5jsy8bmO.juf.WZav.PraOZsRlqZD78hKJJMvI1jtwA.tLdxmdcVJspBMNqzrh7RwGD6QHtSJubPbyn" title="Eurocity (Budapest-Nyugati pu >> Praha hl.n.)" style="color:#008000;" class="ico-train-EC" onclick="return PopupOpen(event,&#39;route&#39;);">270 Metropolitan</a> <img src="img/FC/082.gif" alt="do označených vozňov možno k cestovnému lístku zakúpiť miestenku" title="do označených vozňov možno k cestovnému lístku zakúpiť miestenku" width="14" height="14" /> <img src="img/FC/077.gif" alt="reštauračný alebo bistro vozeň" title="reštauračný alebo bistro vozeň" width="14" height="14" /> <img src="img/FC/186.gif" alt="v označených vozňoch je v cene cestovného bezdrôtové pripojenie k internetu" title="v označených vozňoch je v cene cestovného bezdrôtové pripojenie k internetu" width="20" height="14" /> <img src="img/FC/179.gif" alt="vo vlaku je radený vozeň s prípojkou 230 V" title="vo vlaku je radený vozeň s prípojkou 230 V" width="14" height="14" /> <img src="img/FC/174.gif" alt="vozeň alebo kupé vo vozni vyhradené pre cestujúcich s deťmi do 10 rokov" title="vozeň alebo kupé vo vozni vyhradené pre cestujúcich s deťmi do 10 rokov" width="14" height="14" /> <img src="img/FC/175.gif" alt="pojazdná úschovňa batožín, povinná rezervácia miest pre bicykle" title="pojazdná úschovňa batožín, povinná rezervácia miest pre bicykle" width="14" height="14" /> <img src="img/FC/170.gif" alt="zjednodušená preprava batožín, rozšírená preprava bicyklov - pod dohľadom cestujúceho s povinnou rezerváciou" title="zjednodušená preprava batožín, rozšírená preprava bicyklov - pod dohľadom cestujúceho s povinnou rezerváciou" width="23" height="15" /> <img src="img/FC/169.gif" alt="vo vlaku je radený vozeň so zdvíhacou plošinou a kupé na prepravu imobilných cestujúcich" title="vo vlaku je radený vozeň so zdvíhacou plošinou a kupé na prepravu imobilných cestujúcich" width="14" height="14" /> </td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td><a href="https://www.cd.cz/stanice/38015/" title="Informácie o stanici" target="statinfo">Brno dolní nádraží</a> </td><td class="right">21:35</td><td class="suppress right">21:37</td><td colspan="2">&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td colspan="6" class="notes"><p>Celkový čas <strong>2 hod 17 min</strong>, vzdialenosť <strong>188 km</strong></p><ul><li class="ico-info-beige" title="Dopravca">Železničná spoločnosť Slovensko, a.s.</li></ul><p class="links"><a href="/detail/?p=MTAyNTAzNzc2JTE3MzQwODMyOSUlVmxha0J1c01IRFNrLWVlZjllZjcxOTZkMzRiOWI5YTQwNzcwMzdmYmEwOTE3LTY-" onclick="return PopupOpen(event,&#39;connmore&#39;);">Detail spojenia</a> | <a href="javascript:PrintConnResults(173408329)">Vytlačiť</a> | <a href="javascript:MailConnResults('173408329');">Poslať e-mailom</a> | <a href="javascript:DeleteConnection(173408329, false)">Odstrániť spojenie</a> | <a href="javascript:MCAddItem(173408329, false)">Pridať do Mojich spojení</a> | <a href="../../API.aspx?cmd=ICAL&p=Vmxha0J1c01IRFNrJTEwMjUwMzc3NiUxNzM0MDgzMjk-" class="nobr">Pridať do kalendára</a></p></td>
+		</tr>
+	</tbody>
+</table><table id="ctl00_cDM_restbl_173408332" class="results" border="0">
+	<thead>
+		<tr>
+			<th class="time w6p">20:20</th><th class="left w6p">Dátum</th><th class="left w31p">Odkiaľ/Prestup/Kam</th><th class="right w5p">Prích.</th><th class="right w5p">Odch.</th><th class="right w7p">Pozn.</th><th class="right w6p">&nbsp;</th><th class="left w36p">Spoje</th>
+		</tr>
+	</thead><tbody>
+		<tr class="datarow first">
+			<td class="check"><input name="ctl00$cDM$Print173408332" type="checkbox" id="ctl00_cDM_Print173408332" onclick="javascript:ChangePrint(173408332)" class="inp-checkbox" /></td><td class="date">28.5.</td><td>Trnava,,AS </td><td class="suppress center ">></td><td class="right">20:20</td><td class="note" colspan="2"><span title="nástupište">3</span></td><td><img src="../../img/bus_p.gif" alt="Autobus" title="Autobus" /> <a href="/draha/?p=AmBQW1FpuozRmXD8xOxUUrH71XR.qyOD3b4Donqmg:qbKfBO9Gv4tSyI.mYVhfep5MW86kIKV7oTKtGDBWsRYnPp5IhbX.M3QyPahAXCBJmQ9tiRkPW9XupBGV33UJxbQBxZrUeWPEk6DFfxXRB3Yw--" title="diaľkový autobus (Bardejov,Bardejov.Kúpele >> Bratislava,,AS)" style="color:#FF0000;" onclick="return PopupOpen(event,&#39;route&#39;);">701504 1</a> </td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td>Bratislava,,AS </td><td class="right">21:00</td><td class="right">22:00</td><td colspan="2"><table class="unitednote" border="0">
+				<tr>
+					<td class="note"><span title="nástupište">1</span></td><td class="right"><a href="https://online.slovaklines.sk/externalwaitscreen.aspx?l=sk&type=eu&aid=cp&dep=801000029&arr=999000682&jtype=1&dd=28.05.2019&dt=22:00&ad=28.05.2019&at=23:00" target="slovaklines_eshop" class="buylink"><img src="../../img/kup-zlute-sk.png" alt="Kúpiť cestovný lístok" title="Kúpiť cestovný lístok" /></a> </td>
+				</tr>
+			</table></td><td><img src="../../img/bus_p.gif" alt="Autobus" title="Autobus" /> <a href="/draha/?p=.44vXKxxb8w0gA:MyLPgdugSLBT3KVGfjxErJBrHb4qAlHdIoOZwt.Llh.j1k.oLS:Ia1CY8FiEpjX3bkMXP8oNbRBTeDwAhpwyMHMP6rAnwX.UvK1n3UJytyj.nM6N:dRWyYR2tci243X.r3ubWew--" title="medzinárodný autobus (Bratislava,,letisko >> Wien,,Hbf Wiedner Gürtel)" style="color:#008000;" onclick="return PopupOpen(event,&#39;route&#39;);">102806 35</a> </td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td>Wien,,Flughafen Wien </td><td class="right">23:00</td><td class="right">23:35</td><td colspan="2"><table class="unitednote" border="0">
+				<tr>
+					<td class="note"><span title="nástupište">3</span></td><td class="right"><a href="https://cestovnelistky.regiojet.sk/Booking/from/VSW/to/BR/tarif/REGULAR/departure/20190528/?affiliate=idos01062016&utm_source=idos&utm_medium=cpc&utm_campaign=kupted#search-results" target="regiojet_eshop" class="buylink"><img src="../../img/kup-zlute-sk.png" alt="Kúpiť cestovný lístok" title="Kúpiť cestovný lístok" /></a> </td>
+				</tr>
+			</table></td><td><img src="../../img/bus_p.gif" alt="Autobus" title="Autobus" /> <a href="/draha/?p=sBsHZm4S2T8TDCAmZwdG2NWQNAJ:Sb6fRzB:yu115Ag9jE7CG6487tSHZa1BYg4P7MbZxBlX4RIsqezr0quiTnfz09:GwXvW06flEIJR:Gnopfj:Ecuue0PZaJcua5JuDRn05K9p4UP8t9vahqs9LQ--" title="medzinárodný autobus (Wien,,Flughafen Wien >> Praha,,ÚAN Florenc)" style="color:#008000;" onclick="return PopupOpen(event,&#39;route&#39;);">000032 12</a> </td>
+		</tr><tr class="datarow">
+			<td class="empty">&nbsp;</td><td class="date red">29.5.</td><td>Brno,,Benešova tř.hotel GRAND </td><td class="right">2:00</td><td class="suppress right">2:10</td><td colspan="2">&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td colspan="6" class="notes"><p>Celkový čas <strong>5 hod 40 min</strong>, vzdialenosť <strong>258 km</strong></p><ul><li class="ico-info-beige" title="Dopravca">J & M SLIVTOUR, s.r.o. (Bus 701504), Slovak Lines Express, a.s. (Bus 102806), RegioJet/STUDENT AGENCY k.s. (Bus 000032)</li></ul><p class="links"><a href="/detail/?p=MTAyNTAzNzc2JTE3MzQwODMzMiUlVmxha0J1c01IRFNrLWVlZjllZjcxOTZkMzRiOWI5YTQwNzcwMzdmYmEwOTE3LTY-" onclick="return PopupOpen(event,&#39;connmore&#39;);">Detail spojenia</a> | <a href="javascript:PrintConnResults(173408332)">Vytlačiť</a> | <a href="javascript:MailConnResults('173408332');">Poslať e-mailom</a> | <a href="javascript:DeleteConnection(173408332, false)">Odstrániť spojenie</a> | <a href="javascript:MCAddItem(173408332, false)">Pridať do Mojich spojení</a> | <a href="../../API.aspx?cmd=ICAL&p=Vmxha0J1c01IRFNrJTEwMjUwMzc3NiUxNzM0MDgzMzI-" class="nobr">Pridať do kalendára</a></p></td>
+		</tr>
+	</tbody>
+</table>    
+<!-- zobrazeni vysledku end-->
+
+    
+    <!-- buttons bottom start -->
+        <p id="ctl00_cDM_ctlChoseConnBottom_choseconn" class="screen">
+    <strong><span id="ctl00_cDM_ctlChoseConnBottom_allres">Všetky</span><span id="ctl00_cDM_ctlChoseConnBottom_choseres" class="hidden">Vybraté</span> výsledky</strong>
+    <a href="javascript:PrintConnsResults('ctl00_cDM_Print',false);" id="ctl00_cDM_ctlChoseConnBottom_connprint" class="ico-print m-textlink" title="Vytlačiť nájdené spojenie">Vytlačiť</a>
+    <a href="javascript:PrintPDFConnsResults('ctl00_cDM_Print',false);" id="ctl00_cDM_ctlChoseConnBottom_connprintpdf" class="ico-pdf m-textlink">PDF</a>
+    <a href="javascript:MailConnsResults('ctl00_cDM_Print',false);" id="ctl00_cDM_ctlChoseConnBottom_connmail" class="ico-mail m-textlink" title="Poslať nájdené spojenie e-mailom">Poslať e-mailom</a>
+    <a href="javascript:MCAddItems(false);" id="ctl00_cDM_ctlChoseConnBottom_connaddmc" class="ico-wallet m-textlink" title="Pridá nájdené spojenia do Mojich spojení">Pridať do Mojich spojení</a>
+    <a href="javascript:void(0);" id="ctl00_cDM_ctlChoseConnBottom_connsettings" class="ico-settings m-textlink" title="Nastavenie tlače" onclick="javascript: ShowHideDiv2(event, &#39;PrintSettings&#39;, &#39;2&#39;);">Nastavenie</a>
+    
+    
+</p><div id="ctl00_cDM_ctlPagingBottom_ctlPaging" class="r screen">
+    <a onclick="javascript:return ConnPrevNextClick(true);" id="ctl00_cDM_ctlPagingBottom_cmdPrev" title="Predchádzajúce spojenie (kláves P)" class="btn-arrow-prev" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlPagingBottom$cmdPrev&#39;,&#39;&#39;)"><span class="iw">predchádzajúce</span></a>
+    <a onclick="javascript:return ConnPrevNextClick(false);" id="ctl00_cDM_ctlPagingBottom_cmdNext" title="Nasledujúce spojenie (kláves N)" class="btn-arrow-next" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlPagingBottom$cmdNext&#39;,&#39;&#39;)"><span class="iw">nasledujúce </span></a>
+</div>
+<div class="screen">
+    
+    <a onclick="javascript:return IsEnableClick();" id="ctl00_cDM_ctlResBtnsBottom_cmdChangeInput" title="Zmeniť zadanie na nájdenie spojenia (kláves Z)" class="btn-text-blue" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlResBtnsBottom$cmdChangeInput&#39;,&#39;&#39;)"><span class="iw">Zmeniť zadanie</span></a>
+    <a onclick="javascript:return IsEnableClick();" id="ctl00_cDM_ctlResBtnsBottom_cmdNew" title="Nové zadanie na nájdenie spojenia (kláves O)" class="btn-text-blue" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlResBtnsBottom$cmdNew&#39;,&#39;&#39;)"><span class="iw">Nové zadanie</span></a>
+    <a onclick="javascript:return IsEnableClick();" id="ctl00_cDM_ctlResBtnsBottom_cmdConnBack" title="Nájdenie spojenia v opačnom smere jazdy (kláves H)" class="btn-text-blue" href="javascript:__doPostBack(&#39;ctl00$cDM$ctlResBtnsBottom$cmdConnBack&#39;,&#39;&#39;)"><span class="iw">Hľadať cestu naspäť</span></a>
+    <a href="javascript:void(0);" id="ctl00_cDM_ctlResBtnsBottom_cmdConnFixed" class="btn-text-blue" title="Trvalý odkaz na nájdené spojenia" onclick="javascript:ShowHideDiv_Fix(event, &#39;ctlResBtnsBottom_cmdConnFixed&#39;);"><span class="iw">Trvalý odkaz</span></a>
+    
+    
+</div>
+
+        <div class="break"></div>
+    <!-- buttons bottom end -->
+    
+</div>
+</div>
+
+
+
+                            
+                            
+
+                            <div class="break"></div>                             
+                        </div>
+                        <div id="ctl00_ctlContentFooter" class="content-footer">
+                            
+<div id="lang-menu">
+     <ul><li><a onclick="javascript:SetConnLng(&#39;e&#39;);" id="ctl00_cSelL_cmdENGLISH" class="flag-en" href="javascript:__doPostBack(&#39;ctl00$cSelL$cmdENGLISH&#39;,&#39;&#39;)">English</a></li><li><a onclick="javascript:SetConnLng(&#39;g&#39;);" id="ctl00_cSelL_cmdGERMAN" class="flag-de" href="javascript:__doPostBack(&#39;ctl00$cSelL$cmdGERMAN&#39;,&#39;&#39;)">Deutsch</a></li></ul>
+</div>
+                            
+<p>
+    <a href="mailto:cis@inprop.sk"  title="Napíšte nám">Napíšte nám</a>
+    | 
+    <a href="http://portal.cp.sk" target="_blank" class="ext">CP v PDF</a>
+    |
+    <a href="http://www.inprop.sk/data/zsr/cp.exe" class="ext" target="_blank">CP Vlaky</a>
+    |
+    <a href="http://www.busportal.sk" target="_blank" class="ext">BUSPortál</a>
+    |
+    <a href="http://www.inprop.sk/CP.aspx#4" class="ext" target="_blank">CP CALL</a>
+    |
+    <a href="http://www.inprop.sk/CP.aspx#5" class="ext" target="_blank">CP v mobile</a>    
+</p>
+                            <div class="cb"></div>
+                        </div>
+                        <div id="balloondiv" class="jr-popup hide"></div>
+                    </div><!-- end main -->
+                    </form>
+                    <hr class="hidden" />
+                    
+	                
+
+<div id="msk-footer"><!-- start PageFooter -->
+    <div class="r right">	   
+        Dáta sú garantované dopravcami (ext20)
+    </div>
+    <div class="break"></div>
+</div><!-- end PageFooter -->
+
+
+<div data-spklw-widget="widget-59b16287385e0"></div> 
+<script src="//widgets.sprinklecontent.com/v2/sprinkle.js" async></script> 
+
+
+
+    <div class="mskmiddleboard">
+        <div id="adoceanskudpipphrpm"></div>
+        <script type="text/javascript">
+            /* (c)AdOcean 2003-2017, hnonline.sk - cp.sk - advertrectangle*/
+            ado.slave('adoceanskudpipphrpm', { myMaster: 'CV43IME3J_W35SafCwtDcfckDnPQqtr8p9Dr6S6Xt0v.c7' });
+        </script>
+    </div>
+
+
+<div class="footerlinks">
+    <div class="rows">
+        <a href="http://hnonline.sk" target="_blank">HNonline</a> | 
+        <a href="http://hnbiznis.sk" target="_blank">Biznis</a> | 
+        <a href="https://science.hnonline.sk" target="_blank">Veda</a> | 
+        <a href="http://hnhistory.sk" target="_blank">História</a> | 
+        <a href="http://hnfocus.sk" target="_blank">HNfocus</a> | 
+        <a href="http://7viet.sk" target="_blank">7viet</a> |
+        <a href="http://strategie.sk" target="_blank">Stratégie</a> | 
+        <a href="http://rungo.sk" target="_blank">RunGo</a> | 
+        <a href="http://svetevity.sk" target="_blank">SvetEvity</a> | 
+        <a href="http://mediweb.sk" target="_blank">Mediweb</a> | 
+        <a href="http://dia.sk" target="_blank">Dia</a>
+    </div>
+    <div class="rows">
+        <a href="http://hnkonto.sk" target="_blank">Predplatné</a> | 
+        <a href="http://poradna.hnonline.sk" target="_blank">Poradňa</a> | 
+        <a href="http://hnkonferencie.sk" target="_blank">Konferencie</a> |         
+        <a href="https://www.zlacnene.sk/" target="_blank">Akcie a zľavy</a>
+    </div>
+    <div class="rows noborder">
+        <a href="http://mafraslovakia.sk" class="bold" target="_blank">MAFRA Slovakia</a> | 
+        <a href="http://mafraslovakia.hnonline.sk/inzercia" target="_blank">Inzercia</a> | 
+        <a href="http://mafraslovakia.hnonline.sk/online-inzercia" target="_blank">Online Inzercia</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+        <div id="pagehourglass" class="ajax-loader">Načítavam dáta...</div>
+        <div id="my-connections">
+
+</div>
+        
+<!-- start PageEnd -->
+<script type="text/javascript" src="/IdosResource.ashx?file=calendar%2fcalendar-slovak.js&v=16296"></script> 
+
+<script type="text/javascript">
+if(oBaseParams.get_MCItemCount() > 0) {SetMotherMarginBottom();}
+var aiListConnID = new Array(); aiListConnID = [173408333,173408329,173408332];
+var goSearchHistory = new SearchHistory('MAFRASK', false, false);
+goSearchHistory.AddItem('Trnava » Brno; Česko', '', 'https://cp.hnonline.sk/vlakbusmhd/spojenie/?f=Trnava&amp;t=Brno+%5b*CZ%5d&amp;fc=1&amp;tc=1&amp;&source=history', 'ui-ico-trainbus');
+$(function() {if(window.pageLoad) pageLoad();});
+</script>
+<!-- end PageEnd -->
+        
+<!-- (C)2000-2016 Gemius SA - gemiusAudience / cp.sk / dCP -->
+<script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    var pp_gemius_identifier = '0stF1OOAmY3.bzDLXcWOyaP8.j6iTaLP05bJG7CDBjv.k7';
+    // lines below shouldn't be edited
+    function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};
+    gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
+    (function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
+        gt.setAttribute('defer','defer'); gt.src=l+'://gask.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+    //--><!]]>
+</script>    
+<!-- (c) 2016 Gemius SA / gemiusHeatMap / mafrask -->
+<script type="text/javascript">
+    var ghmxy_type = 'percent';
+    var ghmxy_identifier = 'B8Lq_G7ov4NzRZOKTC2MafTX33kpmW7Q0aRQShvsnwj.97';
+    var ghmxy_hitcollector = 'ghmsk.hit.gemius.pl';
+</script>
+<script async type="text/javascript" src="https://ghmsk.hit.gemius.pl/hmapxy.js"></script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26248206-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-26248206-2');
+    gtag('config', 'UA-90225-23');
+</script>
+        
+        
+    </body>
+</html>
+
